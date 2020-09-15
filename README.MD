@@ -29,6 +29,7 @@ PreRequisitos
   * Git
   * NodeJS (>=v12.14.1).
   * PM2
+  * Docker
 
 Instalación
 -------------
@@ -44,13 +45,14 @@ Instalación
   cd /home/usuario/dev
   ```
 
-* Clonar el repositorio del vigilante.
+* Clonar el repositorio.
 
   ```
   git clone https://github.com/joeljb/CRUD-EXPRESS-CON-MONGODB.git
   ```
 
 * Ir al proyecto.
+
   ```
   cd CRUD-EXPRESS-CON-MONGODB
   ```
@@ -66,6 +68,7 @@ Ejecutarlo en producción
 
 Para realizar el deploy debemos ejecutar:
 * El comando para generar los archivos de producción.
+
 ```
 npm run build
 ```
@@ -76,31 +79,22 @@ git
 Estamos trabajando con git flow para trabajar con master, develop, feature, hotfix y releases.
 
 * iniciamos git flow con el siguiente comando
+
 ```
 git flow init
 ```
 
 * creamos el feature api-endpoint
+
 ```
 git flow feature start api-endpoint
 ```
-
-
-
-
-
-
 
 Comando con las independecias utilizadas
 -------------
 
 npm install --save express mongoose express-validator body-parser cors dotenv
 
-
 npm install -D @babel/cli @babel/core @babel/node @babel/plugin-transform-runtime @babel/preset-env nodemon
 
-
 npm install -D eslint eslint-config-airbnb-base eslint-plugin-babel eslint-plugin-import eslint-plugin-jest
-
-
-
