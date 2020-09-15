@@ -68,9 +68,22 @@ Para realizar el deploy debemos ejecutar:
 * El comando para generar los archivos de producción.
 ```
 npm run build
-  ```
-    Este comando creara la carpeta dist con los archivos para subir al servidor
-  ```
+```
+  Este comando creara la carpeta dist con los archivos para subir al servidor
+
+git
+-------------
+Estamos trabajando con git flow para trabajar con master, develop, feature, hotfix y releases.
+
+* iniciamos git flow con el siguiente comando
+```
+git flow init
+```
+
+* creamos el feature api-endpoint
+```
+git flow feature start api-endpoint
+```
 
 
 
@@ -88,3 +101,6 @@ npm install -D @babel/cli @babel/core @babel/node @babel/plugin-transform-runtim
 
 
 npm install -D eslint eslint-config-airbnb-base eslint-plugin-babel eslint-plugin-import eslint-plugin-jest
+
+
+
