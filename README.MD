@@ -74,7 +74,7 @@ npm run build
 ```
   Este comando creara la carpeta dist con los archivos para subir al servidor
 
-  * El comando para generar los archivos de producción.
+  * Ejecutar el proyecto com pm2.
 
 ```
   pm2 start dist/server.js -i max
@@ -137,6 +137,22 @@ git flow init
 
 ```
 git flow feature start api-endpoint
+```
+
+* una vez terminado la programacion se finaliza el feature
+
+```
+git flow feature finish api-endpoint
+```
+* iniciamos el release a la version 1.0
+
+```
+git flow release start '1.0'
+```
+* y por ultimo finalizamos el release 
+
+```
+git flow release finish '1.0'
 ```
 
 
