@@ -20,6 +20,8 @@ var _middleware = _interopRequireDefault(require("./Services/middleware"));
 
 var _appRouter = _interopRequireDefault(require("./appRouter.js"));
 
+var _index = _interopRequireDefault(require("./config/index"));
+
 //importamos express framework principal
 //importamos para trabajar con http
 //importamos cors para dar acceso 
@@ -29,7 +31,10 @@ var _appRouter = _interopRequireDefault(require("./appRouter.js"));
 //importamos el modulo demongo db
 //importamos los middlewares
 // importamos el router 
-//eventos para la conexion rechazada
+console.log('config');
+console.log(_index["default"]);
+console.log('config'); //eventos para la conexion rechazada
+
 process.on('unhandledRejection', function (rejectionErr) {
   // Won't execute
   console.log('unhandledRejection Err::', rejectionErr);
@@ -94,7 +99,7 @@ var setUpExpress = function setUpExpress() {
   app.use(_middleware["default"].errorHandler);
   app.use(_middleware["default"].notFoundHandler); // inciar server
 
-  app.server.listen('8000', function () {
+  app.server.listen(_index["default"].port, function () {
     console.log("El servidor esta corriendo en => http://localhost:".concat(app.server.address().port, " con el id del proceso ").concat(process.pid));
   }); // si ocurre algun error
 
