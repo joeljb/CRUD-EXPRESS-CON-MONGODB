@@ -203,7 +203,38 @@ npm install -D eslint eslint-config-airbnb-base eslint-plugin-babel eslint-plugi
 
 
 -------------
+
+rutas disponibles
+-------------
+
+http://localhost:8000/api/endpoints
+
+http://localhost:8000/api/endpoint/5f6136cfc734a27ed8eca10f
+
+http://localhost:8000/api/endpoint/eliminar
+{
+	id: "5f610560c2bdcee672b37bcb"
+}
+
+
+
+http://localhost:8000/api/endpoint/editar
+{
+  "name": "joel jose",
+  "dni": "1234567",
+  "cellPhone": "12345679",
+  "email": "joelEditado@gmail.com",
+}
+
+http://tdtiperu.com:35001/api/endpoint/crear
+{
+  "name": "joel jose bolivar gutierrez ",
+  "email": "joel_jose99@hotmail.com",
+  "cellPhone": "982066147",
+  "dni": "20002349",
+}
+
+
+
+-------------
 [web donde esta ejecutandose en producción](http://tdtiperu.com:8000/api/endpoints)
-
-
-
