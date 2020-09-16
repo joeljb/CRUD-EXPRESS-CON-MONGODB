@@ -23,6 +23,12 @@ import middlewares from './Services/middleware' //importamos los middlewares
 
 import setRouter from './appRouter.js'; // importamos el router 
 
+import config from './config/index'
+
+console.log('config')
+console.log(config)
+console.log('config')
+
 //eventos para la conexion rechazada
 process.on('unhandledRejection', (rejectionErr) => {
   // Won't execute
@@ -97,7 +103,7 @@ const setUpExpress = () => {
   app.use(middlewares.notFoundHandler);
 
   // inciar server
-  app.server.listen('8000', () => {
+  app.server.listen(config.port, () => {
     console.log(`El servidor esta corriendo en => http://localhost:${app.server.address().port} con el id del proceso ${process.pid}`);
   });
 
