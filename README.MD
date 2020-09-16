@@ -63,6 +63,40 @@ Ejecutar en desarrollo
 npm run dev
 ```
 
+
+Estructura de Carpetas
+-------------------------------
+
+* **dist** : Carpeta donde van a estar los archivos de produccion.
+* **src** : Contiene los módulos creados.
+
+    * **config**: Para agregar los archivos de configuracion.
+      * **index.js**: esta las variables de configuracion como port y url de mongodb.
+    * **Controllers**: Carpeta destinadas para agregar controladores.
+      * **errorTypes.js**: Para manejar los errores.
+    * **Resources**: Carpeta destinadas para los recursos.
+      * **Enpoint**: Carpeta donde van a estar los archivos para este recurso.
+        * **Endpoint.js**: El archivo donde estan los motodos para consultar, cousultarId, crear, editar y eliminar.
+        * **ModelEndpoint.js**: donde esta definido el modelo.
+        * **route.js**: donde esta definidas todas las rutas para este recurso.
+    * **Services**: Esta el servicios del middleware y de mongodb.
+
+        * **middleware.js**: Esta un middleware para la url no econtradas y un middleware para manejar errores.
+
+        * **dbMongo.js**:Archivo para hacer la conexion a mongodb.
+
+    * **appRouter.js**: Donde van a estar las rutas todas las rutas.
+
+    * **server.js**: modulo principal de la aplicacion para el iniciar
+    
+* **.gitignore**: Archivo para ignorar las carpetas o archivos que no se quiere
+que se suba a gitlab.
+
+* **README.md**: Archivo donde esta la documentación del proyecto.
+
+* **package.json**: Archivo para cargar los paquetes y las versiones.
+
+
 Ejecutarlo en producción con pm2
 -------------
 
@@ -97,10 +131,10 @@ npm run build
   pm2 save
 ```
 
-Ejecutarlo en producción con dockert
+Ejecutarlo en producción con docker
 -------------
 
-descargar las imagenes de dockert
+descargar las imagenes de docker
 
 ```
 docker pull joeljbperu/mongo-db:4.4
